@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Atividade Formativa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+  </head>
+  <body>
+    <header>
+        <h1 class="title">Monitoramento Planta Industrial</h1>
+    </header>
+
+    <main class="container">
+      <div class="dados">
+        <div class="card">
+          <h2>Última Temperatura</h2>
+          <p class="ultima-temperatura">-- °C</p>
+        </div>
+
+        <div class="card">
+          <h2>Última Umidade</h2>
+          <p class="ultima-umidade">-- %</p>
+        </div>
+
+        <div class="card">
+          <h2>Quantidade</h2>
+          <p class="quantidade">0</p>
+        </div>
+      </div>
+
+      <section class="tables-section">
+          <div class="table-container">
+            <h2>Dados ThingSpeak</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data e Hora</th>
+                        <th>Temperatura</th>
+                        <th>Umidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tbody class="table-nuvem">
+            </table>
+          </div>
+
+          <div class="table-container">
+            <h2>Dados MySQL</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Entry</th>
+                        <th>Data</th>
+                        <th>Temp.</th>
+                        <th>Umid.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tbody class="table-sql">
+            </table>
+          </div>
+      </section>
+
+      <div class="actions">
+          <button class="btn-leitura">Nova Leitura</button>
+      </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>
